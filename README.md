@@ -9,7 +9,7 @@ The goal is to create an application using a button, a screen, and interaction w
  * Wemos.cc 1-button Shield v2.0.0
  * Wemos.cc Tripler base v1.0.0
  * USB - Micro USB cable
- * Button cap
+ * Red button cap that fits the button
  
 Most hardware is ordered via the AliExpress Wemos store. It combines shipping costs when ordering multiple products. The button cap and USB cable are from my stock. Since the tripler base contains a prototyping area, it is easy to add other I/O.
 
@@ -19,7 +19,7 @@ The configuration uses female headers on the triple base, and the d1 mini and sh
 
 In the preferences, add one additional board manager URL `http://arduino.esp8266.com/stable/package_esp8266com_index.json`.
 Then in the Board Manager menu, search for Wemos, and install the *esp8266* by *ESP8266 Community*. Select the correct board and COM/USB port.
-To verify you can use the `SimplePush.ino` from the referenced button shield examples, that uses the button to switch on the LED on the ESP module.
+To verify you can use the `SimplePush.ino` from the Github button shield examples (see reference fo URL) `D1_mini_Examples\examples\04.Shields\1_Button_Shield\SimplePush`, that uses the button to switch on the LED on the ESP module.
 
 The next step is to connect the OLED shield. The shield defaults to I2C address 0x3C. You can verify this addresss with the referenced `I2C_Scanner.ino` example. After uploading the sketch to the board, open the serial monitor and the address is printed there. This confirms the shield uses the D1/D2 ports for I2C and the I2C address.
 
@@ -48,7 +48,8 @@ In the Arduino IDE, adjust these lines using your local WiFi login and the Cayen
     char password[] = "MQTT_PASSWORD";
     char clientID[] = "CLIENT_ID";
     
-Now on your myDevices dashboard, there is a rectangle with a `+` to `Add to your dashboard`, so click it. Then the value is displayed. On the top right of the value widget, there is a `Settings`, change the Widget name to `uptime`, the icon to `Date/Time` and the decimals to `0`. Using `Details & Chart` you can see the values in a timeline. You can also change the device icon of your Wemos device name to `Wi-Fi`.
+Upload the sketch and values will arrive on your myDevices dashboard; there is a rectangle with a `+` to `Add to your dashboard`, so click it. Then the value is displayed. On the top right of the value widget, there is a `Settings`, change the Widget name to `uptime`, the icon to `Date/Time` and the decimals to `0`. Using `Details & Chart` you can see the values in a timeline. You can also change the device icon of your Wemos device name to `Wi-Fi`. So now the integration of your wemos with the dashboard is created.
+
 
 	
 	
